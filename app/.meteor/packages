@@ -10,5 +10,7 @@ iron:router
 msavin:mongol
 meteorhacks:kadira
 aldeed:collection2
-aldeed:autoform
-twbs:bootstrap
+zodiase:mdl
+useraccounts:unstyled
+accounts-password
+accounts-google
