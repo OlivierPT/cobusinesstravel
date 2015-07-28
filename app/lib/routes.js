@@ -10,3 +10,11 @@ Router.route('/', {
   action: 'action',
   where: 'client'
 });
+
+
+Router.route('authent', {
+  name: 'authent',
+  controller: 'AuthentController',
+  action: 'action',
+  where: 'client'
+});
