@@ -3,8 +3,13 @@
   color: white;
 }
 
-
 .main-toolbar {
   background-color: #1A237E;
   color: white;
+}
+
+.angular-google-map-container {
+  padding: 50px;
+  height: 400px;
+  width: 400px;
 }

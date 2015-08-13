@@ -1,4 +1,4 @@
-angular.module('cobiztravel',['angular-meteor', 'ui.router', 'ngMaterial']);
+angular.module('cobiztravel',['angular-meteor', 'ui.router', 'ngMaterial','uiGmapgoogle-maps']);
 
 // Icon configuration
 var themeIcons = function ($mdIconProvider) {
@@ -63,12 +63,12 @@ angular.module("cobiztravel").controller('AppCtrl', ['$scope', '$mdToast', '$ani
 
     $scope.$meteorSubscribe("places");
 
-    $scope.channels = $meteor.collection(function() {
+    $scope.places = $meteor.collection(function() {
       return Places.find();
     });
 
-    $scope.goPlaces = function(channelId){
-      $state.go('channel', {'channelId':channelId});
+    $scope.goPlaces = function(){
+      $state.go('places');
     };
 
     $scope.toogleLeftMenu = function() {

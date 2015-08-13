@@ -24,6 +24,7 @@ angular.module('cobiztravel').config(['$urlRouterProvider', '$stateProvider', '$
      }).state('places', {
         url: '/places',
         templateUrl: 'client/views/places/places.ng.html',
+        controller: 'PlacesCtrl',
         resolve: {
           "currentUser": ["$meteor", function($meteor){
             return $meteor.requireUser();
