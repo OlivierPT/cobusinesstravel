@@ -1,67 +1,12 @@
-<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-  <md-toolbar class="md-tall left-toolbar">
-    <span flex></span>
-    <div layout="column" class="md-toolbar-tools-bottom inset">
-      <span>Channels list</span>
+<div layout="column">
+  <h2 class="md-headline">Places :</h2>
+  <div layout="row">
+    <div flex></div>
+    <div flex="60" class="angular-google-map-container">
+      <ui-gmap-google-map center="map.center" zoom="map.zoom">
+
+      </ui-gmap-google-map>
     </div>
-  </md-toolbar>
-  <md-list flex>
-    <md-list-item class="md-1-line" ng-click="goPlaces()">
-      <md-icon md-svg-icon="communication:ic_messenger_24px" ng-class="{'md-primary': channelActive(channel._id)}"></md-icon>
-      <p>
-        Places
-      </p>
-    </md-list-item>
-  </md-list>
-</md-sidenav>
-
-  <div layout="column" class="relative" layout-fill role="main">
-
-    <md-toolbar md-scroll-shrink layout="row" layout-align="start center" layout-padding class="md-medium md-hue-2">
-      <div class="md-toolbar-tools">
-        <md-button ng-click="toogleLeftMenu('left')" hide-gt-md aria-label="Menu">
-          <md-icon md-svg-icon="action:ic_view_headline_24px"></md-icon>
-        </md-button>
-        <h2>
-          <a href="/home">CoBiz Travel :)</a>
-        </h2>
-        <span flex></span>
-        <md-button ng-href="/sign" ng-hide="$root.currentUser">Sign In</md-button>
-        <div ng-show="$root.currentUser">{{ $root.currentUser.username }}</div>
-        <md-button ng-href="/logout" ng-show="$root.currentUser">Logout</md-button>
-      </div>
-    </md-toolbar>
-
-		<md-content>
-
-      <div layout="column">
-          <h2 class="md-headline">Places :</h2>
-          <form layout="row">
-            <md-input-container md-no-float>
-              <md-icon md-svg-icon="action:ic_search_24px"></md-icon>
-              <input type="text" ng-model="search" id="search"
-                     placeholder="Search" aria-label="Search">
-            </md-input-container>
-            <span flex></span>
-            <md-input-container>
-              <md-select ng-model="orderProperty" placeholder="Sort Order">
-                <md-option value="1">Ascending</md-option>
-                <md-option value="-1">Descending</md-option>
-              </md-select>
-            </md-input-container>
-          </form>
-          <div layout="row">
-            <div flex></div>
-            <div flex="60" class="angular-google-map-container">
-              <ui-gmap-google-map center="map.center" zoom="map.zoom">
-
-              </ui-gmap-google-map>
-            </div>
-            <div flex></div>
-          </div>
-        </div>
-
-
-    </md-content>
-
+    <div flex></div>
   </div>
+</div>

@@ -6,9 +6,9 @@ angular.module('cobiztravel').config(['$urlRouterProvider', '$stateProvider', '$
     $stateProvider
       .state('sign', {
         url: '/sign',
-        templateUrl: 'client/views/users/sign.ng.html',
-        controller: 'SignCtrl',
-        controllerAs: 'sc'
+        views: {
+          "content": { templateUrl: 'client/views/users/sign.ng.html' }
+        }
       })
       .state('logout', {
         url: '/logout',
@@ -23,7 +23,11 @@ angular.module('cobiztravel').config(['$urlRouterProvider', '$stateProvider', '$
        }
      }).state('places', {
         url: '/places',
-        templateUrl: 'client/views/places/places.ng.html',
+        views: {
+          "left-toolbar": { templateUrl: 'client/views/leftToolbar/leftToolbar.ng.html' },
+          "main-toolbar": { templateUrl: 'client/views/mainToolbar/mainToolbar.ng.html' },
+          "content": { templateUrl: 'client/views/places/places.ng.html' }
+        },
         controller: 'PlacesCtrl',
         resolve: {
           "currentUser": ["$meteor", function($meteor){

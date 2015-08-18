@@ -1,3 +1,9 @@
-<body layout="row" ng-controller="AppCtrl">
-	<ui-view layout="row" layout-fill layout-padding></ui-view>
+<body ng-controller="AppCtrl">
+	<div layout="row" layout-fill>
+		<ui-view name="left-toolbar"></ui-view>
+		<div layout="column" class="relative" layout-fill role="main">
+			<ui-view name="main-toolbar"></ui-view>
+			<ui-view name="content"></ui-view>
+		</div>
+	</div>
 </body>
