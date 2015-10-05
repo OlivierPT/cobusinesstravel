@@ -1,18 +1,15 @@
-<md-sidenav layout="column" layout-fill
-  class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-  <md-toolbar class="md-tall left-toolbar">
-    <span flex></span>
-    <div layout="column" class="md-toolbar-tools-bottom inset">
-      <span>Channels list</span>
-    </div>
-  </md-toolbar>
-  <md-list flex>
-    <md-list-item class="md-1-line" ng-click="goPlaces()">
-      <md-icon md-svg-icon="maps:ic_map_24px" ng-class="{'md-primary': channelActive(channel._id)}"></md-icon>
-      <p>
-        Places Map
-      </p>
-    </md-list-item>
-  </md-list>
-  <div flex></div>
-</md-sidenav>
+<md-toolbar class="md-tall md-accent">
+  <span flex></span>
+  <div layout="column" class="md-toolbar-tools-bottom inset">
+    <span>Channels list</span>
+  </div>
+</md-toolbar>
+<md-list flex>
+  <md-list-item class="md-1-line" ng-click="goPlaces()">
+    <md-icon md-svg-icon="maps:ic_map_24px" ng-class="{'md-primary': channelActive(channel._id)}"></md-icon>
+    <p>
+      Places Map
+    </p>
+  </md-list-item>
+</md-list>
+<div flex>&nbsp;</div>
